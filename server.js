@@ -29,7 +29,7 @@ app.use(passport.session());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/waste_of_time", {
 	useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
