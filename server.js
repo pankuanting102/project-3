@@ -29,13 +29,7 @@ app.use(passport.session());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/waste_of_time", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-	mongoOptions
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern", mongoOptions);
 
 // Start the API server
 app.listen(PORT, function () {
