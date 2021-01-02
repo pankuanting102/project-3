@@ -44,4 +44,5 @@ UserSchema.methods.validPassword = function (password) {
 };
 const User = mongoose.model('User', UserSchema);
 User.createIndexes();
+
 module.exports = User;

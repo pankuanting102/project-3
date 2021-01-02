@@ -27,20 +27,9 @@ app.use(passport.session());
 
 // Add routes, both API and view
 app.use(routes);
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-  }
+
 // Connect to the Mongo DB
-mongoose.connect(
-	process.env.MONGODB_URI || 'mongodb://localhost/mern',
-	{
-	  useNewUrlParser: true,
-	  useUnifiedTopology: true,
-	  useCreateIndex: true,
-	  useFindAndModify: false,
-	  mongoOptions
-	}
-  );
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mern", mongoOptions);
 
 // Start the API server
 app.listen(PORT, function () {
